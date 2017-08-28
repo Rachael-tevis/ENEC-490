@@ -1,2 +1,3 @@
-Prices=csvread('EER',1,1) 
+Prices=csvread('EER.csv',3,1) 
+
 
