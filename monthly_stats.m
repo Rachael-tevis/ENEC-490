@@ -1,14 +1,15 @@
 function [ r ] = monthly_stats(vector)
 
-r = zeros(12,12)
+r = zeros(12,2)
 
 for i = 1:12
-      for j = 1:12
+      
           
-          m(j,i) = {[mean(vector(i-1)*12+j), std(vector(i-1)*12+j)]};
-      end
+          m(i,1) = mean(vector(i,:));
+          m(i,2) = std(vector(i,:));
+
 end 
 
-end
+
 
           
