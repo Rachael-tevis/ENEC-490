@@ -8,8 +8,8 @@ for i = 1:12
           m(i,1) = mean(vector(i,:));
           m(i,2) = std(vector(i,:));
 
+end
 end 
-
 
 
           
