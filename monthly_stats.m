@@ -1,6 +1,6 @@
-function [ r ] = monthly_stats(vector)
+function [ m ] = monthly_stats(vector)
 
-r = zeros(12,2)
+m = zeros(12,2)
 
 for i = 1:12
       
