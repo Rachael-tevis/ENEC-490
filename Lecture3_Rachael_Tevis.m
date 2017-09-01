@@ -22,7 +22,7 @@ ylabel('Natural Gas Price ($/MMBtu)','FontSize',14);
 legend('2008','2009','2010','2011','2012','2013','2014','2015','2016');
 
 % Statistics #2: Call monthly_stats
-ms = monthly_stats(data);
+ms = monthly_stats(d);
 
 % Synthetic Random Sample for January
 January = ms(1,1) + ms(1,2)*randn(1000,1);
