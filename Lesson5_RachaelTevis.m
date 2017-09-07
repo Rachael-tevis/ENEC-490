@@ -133,7 +133,7 @@ peaky = csvwrite('peak.csv' peak);
 t = csvread('tempdata.csv');
 
 %Data Mining #3
-scatter(peak, t);
+scatter(peak, t(:,2);
 
 % my code would not run in this format and continues to not recognize peak or t as vatiables, however, I was able to take the
 % data from both peak and the tempdata and used excel to still create a
