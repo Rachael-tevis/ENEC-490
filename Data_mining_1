@@ -4,8 +4,7 @@ peak = zeros(365,1);
 
 for x = 1:365
    
-   for y = transformed_data(11 +(x*24 - 24): 11 + x *24);  
-    
-    peak(x) = max(y)
-   end 
+  y = transformed_data(1 +(x*24 - 24): x *24);  
+  peak(x) = max(y);
+
 end 
