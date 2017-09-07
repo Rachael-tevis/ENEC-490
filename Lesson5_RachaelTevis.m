@@ -102,6 +102,17 @@ end
 
 find(outliers>0);
 
+% #5 continued: The best way to determine if a point was an outlier was to progress through the entire data set 
+%using a selection window that processed specific amounts of data at a time. Because energy demand is seasonally 
+%based due to the changing weather and climate trends, looking at data points and comparing the characteristics of mean and
+%std to similar values within a window allows us to more accurately determine which values are outliers for their particular 
+%seasons. If there is an outlier in our data, we can either choose to fix it, or to ignore the point. If the outlier is 
+%greater than 3-4 standard deviations away from the avg mean and std of the window selection, the point should be removed. For
+%this example with over 8,000 data points, it is not entirerly necessary to remove the point because it most likely has little 
+%influence on the entire mean and std for the entire data set, however, for data sets with a smaller sample size, outliers
+%should be removed in order to have data that is more accurate and representative of the true trends. 
+
+
 
 %Data Mining #1
 
