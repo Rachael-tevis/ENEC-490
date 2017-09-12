@@ -24,14 +24,14 @@ FRI = daypeak_2014(daypeak_2014(:,1)==6,2);
 SAT = daypeak_2014(daypeak_2014(:,1)==7,2);
 SUN = daypeak_2014(daypeak_2014(:,1)==1,2);
 
+% think you need to shorten WED -- it has 53
+WED(end) = [];
 
-peakday_box = [MON;TUE;WED;THU;FRI;SAT;SUN];
-g = [ones(size(MON)); 2*ones(size(TUE)); 3*ones(size(WED)) ; 4*ones(size(THU)) ; 5*ones(size(FRI)); 6*ones(size(SAT)); 7*ones(size(SUN))];
+% I made a matrix here, not a vector
+peakday_box = [MON TUE WED THU FRI SAT SUN];
 
-%figure;
-%boxplot(peakday_box, WED)
-
-boxplot(peakday_box,g)  %NEEDS RELABELING ON X AXIS
+figure;
+boxplot(peakday_box,'Labels',{'MON','TUE','WED','THU','FRI','SAT','SUN'});
 xlabel('Day of Week')   %ORDER OF DATA: STARTS WITH MONDAY ENDS SUNDAY, 1 IS MONDAY WHEN IT SHOULD BE 2
 ylabel('Peak Electricity Demand') %OUTLIER ON SUNDAY
 title('Peak Electricty Demand Per Day of the Week')
